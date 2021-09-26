@@ -1,16 +1,21 @@
 import React from 'react';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faDonate } from '@fortawesome/free-solid-svg-icons'
 import "./children.css"
 const Children = (props) => {
+    // Icon section...............
     const fbIcon = <FontAwesomeIcon icon={faFacebook} />
     const instaIcon = <FontAwesomeIcon icon={faInstagram} />
+
+    // destructure .............
     const { name, age, image, donate } = props.children
     return (
         <div className="col">
             <div className="card">
+                {/* Children Image section................... */}
                 <img src={image} className="card_image " alt="..." />
+                {/* children Details section................. */}
                 <div className="card-body text-center">
                     <h5 className="card-title text-primary">Name: {name}</h5>
                     <h5 className="tex">Age:{age}</h5>
